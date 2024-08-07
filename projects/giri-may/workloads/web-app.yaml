@@ -12,4 +12,4 @@ spec:
   namespace: finance
   placement:
     selector: rafay.dev/clusterName=giri-aug7-qc,rafay.dev/kubernetesProvider=AKS
-  version: web-app-v2-202408071340220000
+  version: web-app-v3-202408071341250000
