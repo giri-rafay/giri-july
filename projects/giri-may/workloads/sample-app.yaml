@@ -12,4 +12,3 @@ spec:
   namespace: finance
   placement:
     selector: rafay.dev/clusterName=giri-aug7-qc
-  version: sample-app-v1-202408071343140000
