@@ -11,13 +11,7 @@ metadata:
 spec:
   limitRange:
     container: {}
-    pod:
-      max:
-        cpu: 4m
-        memory: 4Mi
-      min:
-        cpu: 1m
-        memory: 1Mi
+    pod: {}
   namespaceMeshPolicyParams: {}
   networkPolicyParams:
     networkPolicyEnabled: true
@@ -28,9 +22,4 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-aug7-qc
-  resourceQuotas:
-    configMaps: "5"
-    memoryRequests: 4096Mi
-    persistentVolumeClaims: "5"
-    secrets: "5"
-    services: "5"
+  resourceQuotas: {}
