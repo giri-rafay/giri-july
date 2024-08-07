@@ -12,3 +12,4 @@ spec:
   namespace: finance
   placement:
     selector: rafay.dev/clusterName=giri-aug7-qc,rafay.dev/kubernetesProvider=AKS
+  version: cilium-app-v3-202408071418200000
