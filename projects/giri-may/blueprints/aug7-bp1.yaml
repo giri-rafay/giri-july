@@ -4,6 +4,20 @@ metadata:
   name: aug7-bp1
   project: giri-may
 spec:
+  base:
+    name: default
+    version: 2.7.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
   driftWebhook:
     enabled: true
+  networkPolicy:
+    policies:
+    - name: new
+      version: v1
+    profile:
+      name: new
+      version: v1
   type: custom
+  version: version1
