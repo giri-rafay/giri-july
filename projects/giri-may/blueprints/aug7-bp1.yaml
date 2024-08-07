@@ -6,7 +6,7 @@ metadata:
 spec:
   base:
     name: default
-    version: 2.7.0
+    version: 2.8.0
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -20,4 +20,4 @@ spec:
       name: new
       version: v1
   type: custom
-  version: version1
+  version: version2
