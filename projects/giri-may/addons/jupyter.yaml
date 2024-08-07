@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: jupyter
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: jupyterhub
+      chartVersion: 7.1.2
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: jupyter-v1

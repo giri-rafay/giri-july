@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-july
+  project: giri-may
+spec:
+  base:
+    name: minimal
+    version: 2.9.0
+  defaultAddons:
+    enableIngress: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  type: custom
+  version: v2

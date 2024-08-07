@@ -1,0 +1,18 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: testing
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/testing/jenkins-9.0.0.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns-fail-1
+  placement:
+    selector: rafay.dev/clusterName=giri-aug5-qc
+  version: testing-v1-202408070619410000

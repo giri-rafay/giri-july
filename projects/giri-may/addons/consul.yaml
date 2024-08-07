@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: consul
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: consul
+      chartVersion: 11.2.0
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: consul-v1

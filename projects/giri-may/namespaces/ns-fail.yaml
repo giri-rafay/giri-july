@@ -1,0 +1,27 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: ""
+  name: ns-fail
+  project: giri-may
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-mks-may28
+    - key: rafay.dev/clusterName
+      value: giri-qc-may27
+    - key: rafay.dev/clusterName
+      value: giri-qc-postupgrade
+    - key: rafay.dev/clusterName
+      value: giri-aks2-jun4
+    - key: rafay.dev/clusterName
+      value: giri-qc-jun18
+    - key: rafay.dev/clusterName
+      value: giri-qc-june21
+  resourceQuotas: {}

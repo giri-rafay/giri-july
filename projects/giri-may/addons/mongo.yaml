@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: mongo
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: mongodb
+      chartVersion: 15.6.0
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: mongo-v1

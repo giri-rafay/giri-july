@@ -1,0 +1,9 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: finance-team
+  description: finance-team
+  name: finance
+  project: giri-may
+spec: {}

@@ -1,0 +1,48 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: cbp1
+  project: giri-may
+spec:
+  base:
+    name: default-aks
+    version: 2.8.0
+  componentsCriticality:
+  - name: opa-policy
+  - name: network-policy
+  - name: cost-profile
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1721238952
+  customAddons:
+  - name: xwing-addon
+    version: v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: new
+      version: v2
+    profile:
+      name: new
+      version: v1
+  opaPolicy:
+    opaPolicy:
+    - name: requiredlabels
+      version: v1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: bp-all

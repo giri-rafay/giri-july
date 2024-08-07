@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: cassandra
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: cassandra
+      chartVersion: 11.1.8
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: cas-v1

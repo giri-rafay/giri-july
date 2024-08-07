@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: minio
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: minio
+      chartVersion: 14.6.1
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: minio-v1

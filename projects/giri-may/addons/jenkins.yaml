@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: jenkins
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: jenkins
+      chartVersion: 13.3.0
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: jenkins-v1

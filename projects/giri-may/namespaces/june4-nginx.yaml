@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rep-drift-action: deny
+  labels:
+    k8smgmt.io/project: giri-may
+    k8smgmt.io/update-time: "1717482928518361389"
+    kubernetes.io/metadata.name: june4-nginx
+    name: june4-nginx
+    rep-addon: june4-nginx
+    rep-cluster: kzll302
+    rep-cluster-name: giri-aks2-jun4
+    rep-drift-reconcillation: disabled
+    rep-organization: 7w2lnkp
+    rep-partner: rx28oml
+    rep-placement: keo07z2
+    rep-project: kno93l2
+    rep-project-name: giri-may
+    rep-workloadid: mxw3o02
+  name: june4-nginx
+  project: giri-may
+spec: {}

@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: rctl-new1
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://../../../giri/netpol/http-sw-app.yaml
+    options: {}
+    type: Yaml
+  namespace: new-ns1
+  placement:
+    selector: rafay.dev/clusterName=giri-aks2-jun4
+  version: v1

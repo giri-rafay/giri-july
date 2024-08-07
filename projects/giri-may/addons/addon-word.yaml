@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: addon-word
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/addon-word/wordpress-22.4.1.tgz
+    type: Helm
+  namespace: addon-word
+  sharing: {}
+  version: v1

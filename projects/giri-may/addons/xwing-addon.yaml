@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: xwing-addon
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/xwing-addon/http-sw-app.yaml
+    type: Yaml
+  namespace: xwing-addon
+  sharing: {}
+  version: v1

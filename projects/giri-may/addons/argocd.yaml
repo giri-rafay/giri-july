@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: argocd
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: argo-cd
+      chartVersion: 6.3.3
+    type: Helm
+  namespace: cert-manager
+  sharing: {}
+  version: argo-v1

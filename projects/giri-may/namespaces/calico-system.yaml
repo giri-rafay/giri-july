@@ -1,0 +1,24 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+    control-plane: "true"
+    kubernetes.azure.com/managedby: aks
+    kubernetes.io/metadata.name: calico-system
+    name: calico-system
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/enforce-version: latest
+  name: calico-system
+  project: giri-may
+spec:
+  drift:
+    action: Deny
+    enabled: true
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-qc-postupgrade
+    - key: rafay.dev/clusterName
+      value: giri-qc-july23
