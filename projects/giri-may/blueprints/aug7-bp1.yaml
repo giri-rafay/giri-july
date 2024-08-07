@@ -6,7 +6,7 @@ metadata:
 spec:
   base:
     name: default
-    version: 2.8.0
+    version: 2.7.0
   defaultAddons:
     enableIngress: true
     enableMonitoring: true
@@ -16,8 +16,10 @@ spec:
     policies:
     - name: new
       version: v1
+    - name: ccnp3
+      version: v1
     profile:
       name: new
       version: v1
   type: custom
-  version: version2
+  version: version3
