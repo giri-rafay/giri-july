@@ -19,7 +19,11 @@ spec:
         cpu: 1m
         memory: 1Mi
   namespaceMeshPolicyParams: {}
-  networkPolicyParams: {}
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: finance-policy
+      version: version1
   placement:
     labels:
     - key: rafay.dev/clusterName
