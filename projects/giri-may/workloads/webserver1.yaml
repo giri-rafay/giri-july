@@ -17,3 +17,4 @@ spec:
   namespace: finance
   placement:
     selector: rafay.dev/clusterName=giri-aug7-qc
+  version: webserver1-v2-202408080212120000
