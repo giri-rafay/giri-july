@@ -1,7 +1,6 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Blueprint
 metadata:
-  description: finance
   name: finance-bp
   project: giri-may
 spec:
@@ -32,13 +31,6 @@ spec:
   namespaceConfig:
     enableSync: true
     syncType: Unmanaged
-  networkPolicy:
-    policies:
-    - name: ccnp1
-      version: v1
-    profile:
-      name: default
-      version: latest
   opaPolicy:
     opaPolicy:
     - name: requiredlabels
@@ -46,9 +38,5 @@ spec:
     profile:
       name: default
       version: latest
-  placement:
-    autoPublish: true
-    fleetValues:
-    - finance
   type: custom
-  version: version1
+  version: version2
