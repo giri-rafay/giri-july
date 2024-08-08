@@ -1,0 +1,17 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  description: test
+  name: git-web-server
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/web-server/nginx-15.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/web-server/values.yaml
+    type: Helm
+  namespace: finance
+  sharing: {}
+  version: version1
