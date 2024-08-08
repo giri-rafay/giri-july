@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: webserver2
+  project: giri-may
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/webserver/nginx-15.4.2.tgz
+      valuesPaths:
+      - name: file://artifacts/webserver/values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: git-finance
+  placement:
+    selector: rafay.dev/clusterName=giri-aug7-qc
