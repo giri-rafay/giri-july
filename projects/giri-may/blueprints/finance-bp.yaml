@@ -31,6 +31,13 @@ spec:
   namespaceConfig:
     enableSync: true
     syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: ccnp1
+      version: v1
+    profile:
+      name: default
+      version: latest
   opaPolicy:
     opaPolicy:
     - name: requiredlabels
@@ -39,4 +46,4 @@ spec:
       name: default
       version: latest
   type: custom
-  version: version2
+  version: version3
