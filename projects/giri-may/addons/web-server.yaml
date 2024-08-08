@@ -1,7 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Addon
 metadata:
-  description: test
+  labels:
+    team: finance
   name: web-server
   project: giri-may
 spec:
@@ -13,5 +14,8 @@ spec:
       - name: file://artifacts/web-server/values.yaml
     type: Helm
   namespace: finance
-  sharing: {}
-  version: version1
+  sharing:
+    enabled: true
+    projects:
+    - name: giri-apr
+  version: version2
