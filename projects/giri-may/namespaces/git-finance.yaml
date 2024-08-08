@@ -13,11 +13,11 @@ spec:
     container: {}
     pod:
       max:
-        cpu: 4m
-        memory: 4Mi
+        cpu: 4u
+        memory: 4095737856u
       min:
-        cpu: 1m
-        memory: 1Mi
+        cpu: 1u
+        memory: 1024458752u
   networkPolicyParams:
     networkPolicyEnabled: true
     policies:

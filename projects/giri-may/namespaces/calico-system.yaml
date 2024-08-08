@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    rafay.dev/description: ""
   labels:
     addonmanager.kubernetes.io/mode: EnsureExists
     control-plane: "true"
@@ -22,3 +24,4 @@ spec:
       value: giri-qc-postupgrade
     - key: rafay.dev/clusterName
       value: giri-qc-july23
+  resourceQuotas: {}

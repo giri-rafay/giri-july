@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
+  annotations:
+    rafay.dev/description: ""
   labels:
     kubernetes.io/metadata.name: may30ns1giri
   name: may30ns1giri
@@ -14,3 +16,4 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: giri-qc-may27
+  resourceQuotas: {}

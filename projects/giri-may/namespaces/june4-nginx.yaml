@@ -2,6 +2,7 @@ apiVersion: infra.k8smgmt.io/v3
 kind: Namespace
 metadata:
   annotations:
+    rafay.dev/description: ""
     rep-drift-action: deny
   labels:
     k8smgmt.io/project: giri-may
@@ -20,4 +21,6 @@ metadata:
     rep-workloadid: mxw3o02
   name: june4-nginx
   project: giri-may
-spec: {}
+spec:
+  namespaceMeshPolicyParams: {}
+  resourceQuotas: {}
