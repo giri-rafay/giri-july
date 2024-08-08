@@ -1,0 +1,49 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: git-finance-bp1
+  project: giri-may
+spec:
+  base:
+    name: default
+    version: 2.9.0
+  componentsCriticality:
+  - name: rabbitmq
+  - name: mongo
+  - name: opa-policy
+  - name: network-policy
+  - name: cost-profile
+  costProfile:
+    name: default-cost-profile-azure
+    version: version-1723023978
+  customAddons:
+  - dependsOn:
+    - mongo
+    name: rabbitmq
+    version: rabbitmq-v1
+  - name: mongo
+    version: mongo-v1
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook:
+    enabled: true
+  namespaceConfig:
+    enableSync: true
+    syncType: Unmanaged
+  networkPolicy:
+    policies:
+    - name: ccnp1
+      version: v1
+    profile:
+      name: default
+      version: latest
+  opaPolicy:
+    opaPolicy:
+    - name: requiredlabels
+      version: v1
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: version3
