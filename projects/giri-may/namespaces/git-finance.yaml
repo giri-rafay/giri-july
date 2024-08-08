@@ -1,0 +1,35 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  annotations:
+    rafay.dev/description: finance-team
+  description: finance-team
+  labels:
+    team: finance
+  name: git-finance
+  project: giri-may
+spec:
+  limitRange:
+    container: {}
+    pod:
+      max:
+        cpu: 4m
+        memory: 4Mi
+      min:
+        cpu: 1m
+        memory: 1Mi
+  networkPolicyParams:
+    networkPolicyEnabled: true
+    policies:
+    - name: finance-policy
+      version: version1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: giri-aug7-qc
+  resourceQuotas:
+    configMaps: "5"
+    memoryRequests: 4096Mi
+    persistentVolumeClaims: "5"
+    secrets: "5"
+    services: "5"
